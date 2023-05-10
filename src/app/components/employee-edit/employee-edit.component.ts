@@ -38,6 +38,7 @@ export class EmployeeEditComponent implements OnInit {
       ],
       designation: ['', [Validators.required]],
       phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      location: ['', [Validators.required]],
     });
   }
 
@@ -60,6 +61,7 @@ export class EmployeeEditComponent implements OnInit {
         email: data['email'],
         designation: data['designation'],
         phoneNumber: data['phoneNumber'],
+        location: data['location'],
       });
     });
   }
@@ -76,6 +78,7 @@ export class EmployeeEditComponent implements OnInit {
       ],
       designation: ['', [Validators.required]],
       phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      location: ['', [Validators.required]],
     });
   }
 

@@ -37,6 +37,7 @@ export class EmployeeCreateComponent implements OnInit {
       ],
       designation: ['', [Validators.required]],
       phoneNumber: ['', [Validators.required, Validators.pattern('^[0-9]+$')]],
+      location: ['', [Validators.required]],
     });
   }
 
@@ -46,7 +47,16 @@ export class EmployeeCreateComponent implements OnInit {
       onlySelf: true,
     });
   }
-
+  // Clear Form Data
+  clearForm() {
+    this.employeeForm.setValue({
+      name:'',
+      email: '',
+      designation: '',
+      phoneNumber: '',
+      location: ''
+    });
+  }
   // Getter to access form control
   get myForm() {
     return this.employeeForm.controls;
